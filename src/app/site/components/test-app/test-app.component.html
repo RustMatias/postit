@@ -1,0 +1,70 @@
+<article>
+    <div class="header-test">
+        <div class="promp">
+            <div class="svg-container">
+                <svg width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                    <path d="M12 8v4"></path>
+                    <path d="M12 16h.01"></path>
+                  </svg>
+            </div>
+              <p class>
+                Right click on any column to start creating your cards. 
+              </p>
+        </div>
+        <div class="alert">
+            <div class="svg-container">
+                <svg width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                    <path d="M12 8v4"></path>
+                    <path d="M12 16h.01"></path>
+                  </svg>
+            </div>
+              <p class>
+                What you save here will be saved inside your browser, that is, if you ever delete the data from your browser, you will lose everything. To prevent this, please <a href="">log in</a>.
+              </p>
+        </div>
+    </div>
+    <section class="columns-container">
+
+
+
+        <div 
+        *ngFor="let column of columns"
+        class="column">
+            <div class="header-column">
+                <h2>{{column.name | uppercase}}</h2>
+                <hr>
+                <button 
+                    (click)="createPostit(column.name)"
+                    class="create ">
+                    <span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5v14"></path>
+                            <path d="M5 12h14"></path>
+                        </svg>
+                    </span> 
+                    Create issue
+                </button>
+
+
+                <!-- postits -->
+                <app-postit
+                draggable=""
+                *ngFor="let postit of column.post"
+                [postit]="postit"
+                ></app-postit>
+            </div>
+        </div>
+
+
+
+        <div class="add-column">
+            <svg width="35" height="35" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5v14"></path>
+                <path d="M5 12h14"></path>
+            </svg>
+        </div>
+
+    </section>
+</article>

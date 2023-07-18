@@ -1,0 +1,75 @@
+
+
+<div
+(dblclick)="editableEnable()"
+
+class="postit"
+[style.background-color] = postit.color
+>
+    
+    <div 
+    class="title">
+        <p *ngIf="!editable" #title>{{postit.name |titlecase}}</p>
+        <input 
+            (keydown)="edit()"
+            *ngIf="editable" 
+            type="text" 
+            class="input-text" 
+            #titleinput>
+        <div class="options">
+            <input 
+            (change)="changeColor()"
+            [value]=postit.color
+            class="color " type="color" #color
+           >
+
+            <div 
+            *ngIf="editable"
+            (click)="editableFinish()"
+            class="finish">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+            </div>
+
+            <div 
+            *ngIf="!editable"
+            (click)="editableEnable()"
+            class="edit">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+              </svg>
+            </div>
+
+            <div 
+            (click)="deletePostit()"
+            class="delete">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6h18"></path>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <path d="M10 11v6"></path>
+                <path d="M14 11v6"></path>
+              </svg>
+            </div>
+
+
+
+        </div>
+        
+    </div>
+    <div class="description">
+        <p 
+            *ngIf="!editable"
+            class="content"
+            #description
+            >{{postit.description}} </p>
+    
+        <textarea (keydown)="edit()"
+        *ngIf="editable" 
+        type="textarea" 
+        class="input-description input-text" 
+        #descriptioninput>></textarea>
+            
+    </div>
+
+</div>

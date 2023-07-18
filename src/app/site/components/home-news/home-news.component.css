@@ -1,0 +1,141 @@
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    width: 14rem;
+    height: 20rem;
+    transition: ease 0.5s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card1{
+    background-color: rgb(235, 202, 147);
+    z-index: 1;
+    transform: rotate(-20deg);
+}
+
+.card2{
+    background-color: rgb(214, 191, 212);
+    z-index: 2;
+    transform: rotate(20deg);
+}
+
+.card-container{
+    display: flex;
+}
+
+article:hover .card1{
+    transform: rotate(-25deg) translateX(-1rem);
+}
+
+article:hover .card2{
+    transform: rotate(25deg) translateX(1rem);
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    margin-top: 2rem;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.card-example-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.title{
+    border-bottom: 1px solid rgb(140, 140, 140);
+    padding: 0.2rem 1rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content{
+    padding:  0.2rem 1rem;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+
+.svg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+/*-------------- Button---------------------*/
+
+button{
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+
+}
+
+.hbtn {
+    background: rgb(255, 255, 255);
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    padding: 8px 20px;
+    text-align: center;
+    
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    z-index: 0;
+} 
+
+
+.hbtn i {
+    padding-right: 8px;
+} 
+
+
+.hb-fill-top::before {
+    position: absolute;
+    content: "";
+    background: var(--purple);
+    transition-duration: 0.3s;
+    z-index: -1;
+    inset: auto auto 0px 0px;
+    width: 100%;
+    height: 0px;
+    opacity: 1;
+} 
+
+
+.hb-fill-top:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+} 
+
+
+.hb-fill-top:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    transition: color 0.3s ease 0s, background 0s ease 0.3s;
+} 

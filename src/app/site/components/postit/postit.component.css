@@ -1,0 +1,134 @@
+
+.header-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.postit{
+    overflow: hidden;
+    margin-top: 0.5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 95%;
+    min-height: 120px;
+    background-color: #ebca93;
+}
+
+.title{
+    border-bottom: 1px solid rgb(140, 140, 140);
+    padding: 0.2rem 1rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.tainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+svg{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+
+.content{
+    
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.description{
+    min-height: 5rem;
+    border-bottom: 1px solid rgb(140, 140, 140);
+    padding: 0.2rem 1rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.color{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: initial;
+    width: 20px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#title{
+    margin-bottom: 9px;
+}
+
+.input-text{
+    background-color: rgba(240, 248, 255, 0.297);
+    border-radius: 0.4rem;
+    padding-left: 0.5rem;
+    min-width: 70%;
+    border: none;
+    outline: none;
+}
+
+.input-description{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    min-height: 3rem;
+    max-width: 100%;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.finish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 22px;
+    width: 22px;
+    background-color: rgb(171, 224, 90);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    margin-left: 0.5rem;
+    margin-left: 1rem;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 22px;
+    width: 22px;
+    background-color: rgb(24, 228, 201);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    margin-left: 0.5rem;
+    margin-left: 1rem;
+}
+
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 22px;
+    width: 22px;
+    background-color: rgb(221, 119, 119);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    margin-left: 0.5rem;
+}

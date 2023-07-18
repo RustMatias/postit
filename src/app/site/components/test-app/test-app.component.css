@@ -1,0 +1,132 @@
+article{
+    width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.524);
+}
+
+.columns-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-test{
+    width: 100%;
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.new{
+    border: none;
+    background-color:rgb(151, 219, 50);
+    color:white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.column h2{
+    margin: 0rem 2rem;
+}
+
+.column{
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-height: 150px;
+    min-width: 30%;
+    max-width: 30%;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    margin: 0rem 0.1rem;
+    margin-bottom: 1rem;
+    width: max-content;
+    background-color: #F4F5F7;
+    padding-bottom: 1rem;
+}
+
+.svg-container{
+    margin: 0.5rem;
+    width: 30px;
+    height: 30px;
+}
+
+.alert{
+    padding: 0.2rem;
+    background-color: rgb(212, 154, 154);
+    border-radius: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 40%;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.promp{
+    padding: 0.2rem;
+    background-color: rgb(166, 166, 235);
+    border-radius: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 40%;
+    border: 2px solid rgb(0, 0, 255);
+}
+
+.create{
+    cursor: pointer;
+    height: 2rem;
+    padding-left: 0.5rem;
+    margin: 0.1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 0.2rem);
+    border: none;
+    border-radius: 0.3rem;
+    background: none;
+    transition: 0.2s;
+}
+
+.create:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+hr{
+    width: 100%;
+}
+.create span{
+    margin-right: 0.2rem;
+    height: 20px;
+    width: 20px;
+}
+
+.add-column{
+    cursor: pointer;
+    margin: 0rem 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F4F5F7;
+    width: 35px;
+    height: 35px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.2s;
+}
+
+.add-column:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+app-postit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

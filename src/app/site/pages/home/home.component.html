@@ -1,0 +1,43 @@
+<article>
+    <header>
+        <img src="./assets/acorn-icon.png" alt="icon">
+        <ul>
+            <li
+            routerLink="home"
+            routerLinkActive="selected"
+            [routerLinkActiveOptions]="{
+                exact: true
+            }"
+            >
+                Home
+            </li>
+
+            <li
+            routerLink="test"
+            routerLinkActive="selected"
+            [routerLinkActiveOptions]="{
+                exact: true
+            }"
+            >
+                Test App
+            </li>
+
+            <li>
+               About
+            </li>
+
+            <li
+            routerLink="singup"
+            routerLinkActive="selected"
+            [routerLinkActiveOptions]="{
+                exact: true
+            }"
+            >
+                Sing Up
+            </li>
+        </ul>
+    </header>
+
+    <router-outlet></router-outlet>
+    
+</article>
